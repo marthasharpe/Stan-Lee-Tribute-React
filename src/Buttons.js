@@ -8,17 +8,23 @@ const buttonBox = {
 function Buttons(props) {
     return(
         <div className="button-container" style={buttonBox}>
+            
             <button
                 className="quote-button"
-                id="new-quote"
+                id="last-quote"
                 style={{cursor: "pointer"}}
-                onClick={props.getQuote}
+                onClick={props.lastQuote}
             >
-            Next Quote
+            Last Quote
             </button>
             
-            <button>
-
+            <button
+                className="quote-button"
+                id="next-quote"
+                style={{cursor: "pointer"}}
+                onClick={props.nextQuote}
+            >
+            Next Quote
             </button>
         </div>
     )

@@ -14,7 +14,7 @@ function Quotes(props) {
     return(
         <div className="quote-bubble" style={quoteBubble}>
             <h2 className="quote-text" id="text">
-                {props.randomQuote}
+                {props.visibleQuote}
             </h2>
             <h3 className="author" id="author">- Stan Lee</h3>
         </div>

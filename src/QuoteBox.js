@@ -29,18 +29,23 @@ const possibleQuotes = [
 
 class QuoteBox extends React.Component {
     state = {
-        randomQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
+        visibleQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
     }
-    getQuote = () => {
+    lastQuote = () => {
         this.setState({
-            randomQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
+            visibleQuote: possibleQuotes[possibleQuotes.indexOf(this.state.visibleQuote)-1]
+        })
+    }
+    nextQuote = () => {
+        this.setState({
+            visibleQuote: possibleQuotes[possibleQuotes.indexOf(this.state.visibleQuote)+1]
         })
     }
     render() {
         return(
             <div className="quote-box" id="quote-box">
-                <Quotes randomQuote={this.state.randomQuote}/>
-                <Buttons getQuote={this.getQuote}/>
+                <Quotes visibleQuote={this.state.visibleQuote}/>
+                <Buttons lastQuote={this.lastQuote} nextQuote={this.nextQuote}/>
             </div>
         )
     }
