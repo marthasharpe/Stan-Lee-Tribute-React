@@ -12,6 +12,7 @@ const possibleQuotes = [
     "All I thought about when I wrote my stories was, “I hope that these comic books would sell so I can keep my job and continue to pay the rent.” Never in a million years could I have imagined that it would turn into what it has evolved into nowadays. Never.",
 
     "I’ve been very lucky. All I wanted was to pay the rent. Then these characters took off and suddenly there were Hulk coffee mugs and Iron Man lunchboxes and The Avengers sweatshirts everywhere. Money’s okay, but what I really like is working.",
+    
     "I never thought that Spider-Man would become the world wide icon that he is. I just hoped the books would sell and I’d keep my job.",
     
     "When you work with people whom you like and you admire because they’re so good at what they do, it doesn’t feel like work. It’s like you’re playing.",
@@ -31,15 +32,22 @@ class QuoteBox extends React.Component {
     state = {
         visibleQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
     }
+
     lastQuote = () => {
-        this.setState({
-            visibleQuote: possibleQuotes[possibleQuotes.indexOf(this.state.visibleQuote)-1]
+        let quoteIndex = possibleQuotes.indexOf(this.state.visibleQuote);
+        let finalQuote = possibleQuotes[possibleQuotes.length - 1];
+        this.setState(
+            {
+            visibleQuote: quoteIndex === 0 ? finalQuote : possibleQuotes[quoteIndex -= 1]
         })
+        console.log(quoteIndex)
     }
     nextQuote = () => {
+        let quoteIndex = possibleQuotes.indexOf(this.state.visibleQuote);
         this.setState({
-            visibleQuote: possibleQuotes[possibleQuotes.indexOf(this.state.visibleQuote)+1]
+            visibleQuote: quoteIndex === possibleQuotes.length ? possibleQuotes[0] : possibleQuotes[quoteIndex += 1]
         })
+        console.log(quoteIndex);
     }
     render() {
         return(
