@@ -18,16 +18,7 @@ function Buttons(props) {
             </button>
             
             <button>
-                <a
-                style={{textDecoration: "none"}}
-                className="twitter-link"
-                id="tweet-quote"
-                href="twitter.com/intent/tweet"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                Tweet
-                </a>
+
             </button>
         </div>
     )
