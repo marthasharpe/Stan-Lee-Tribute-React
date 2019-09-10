@@ -1,4 +1,4 @@
-export const quotesJSON = {"quotes": [
+const quotesData = [
     "If you are interested in what you do, that keeps you going!",
     
     "I don’t really see a need to retire as long as I am having fun.",
@@ -22,4 +22,6 @@ export const quotesJSON = {"quotes": [
     "Luck's a revolving door, you just need to know when it's your time to walk through.",
     
     "The pleasure of reading a story and wondering what will come next for the hero is a pleasure that has lasted for centuries and, I think, will always be with us."
-]}
+]
+
+export default quotesData;

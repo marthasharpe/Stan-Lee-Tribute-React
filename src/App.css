@@ -12,6 +12,7 @@
     font-family: 'Rock Salt', cursive;
     color: white;
     text-align: center;
+    margin: 0;
     font-size: 2rem;
     text-shadow:
     -2px -2px 0 #000,
@@ -30,9 +31,9 @@
   .tribute-info,
   .footer {
     width: auto;
-    max-width: 600px;
+    max-width: 500px;
     background: #fffaaa;
-    margin: 2rem;
+    margin: 2rem 1rem;
     padding: 1rem 2rem;
     font-size: 1.2rem;
   }
