@@ -13,7 +13,7 @@ function Buttons(props) {
                 className="quote-button"
                 id="last-quote"
                 style={{cursor: "pointer"}}
-                onClick={props.lastQuote}
+                onClick={props.previousQuote}
             >
             Last Quote
             </button>

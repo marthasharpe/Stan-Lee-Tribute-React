@@ -1,8 +1,4 @@
-import React from 'react';
-import Quotes from './Quotes';
-import Buttons from './Buttons';
-
-const possibleQuotes = [
+export const quotesJSON = {"quotes": [
     "If you are interested in what you do, that keeps you going!",
     
     "I don’t really see a need to retire as long as I am having fun.",
@@ -26,34 +22,4 @@ const possibleQuotes = [
     "Luck's a revolving door, you just need to know when it's your time to walk through.",
     
     "The pleasure of reading a story and wondering what will come next for the hero is a pleasure that has lasted for centuries and, I think, will always be with us."
-]
-
-class QuoteBox extends React.Component {
-    state = {
-        visibleQuote: possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]
-    }
-
-    previousQuote = () => {
-        let quoteIndex = possibleQuotes.indexOf(this.state.visibleQuote);
-        let finalQuote = possibleQuotes[possibleQuotes.length - 1];
-        this.setState({
-            visibleQuote: quoteIndex === 0 ? finalQuote : possibleQuotes[quoteIndex - 1]
-        });
-    }
-    nextQuote = () => {
-        let quoteIndex = possibleQuotes.indexOf(this.state.visibleQuote);
-        this.setState({
-            visibleQuote: quoteIndex === possibleQuotes.length - 1 ? possibleQuotes[0] : possibleQuotes[quoteIndex + 1]
-        })
-    }
-    render() {
-        return(
-            <div className="quote-box" id="quote-box">
-                <Quotes visibleQuote={this.state.visibleQuote}/>
-                <Buttons previousQuote={this.previousQuote} nextQuote={this.nextQuote}/>
-            </div>
-        )
-    }
-}
-
-export default QuoteBox;
+]}

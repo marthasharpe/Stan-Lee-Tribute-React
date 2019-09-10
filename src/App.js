@@ -1,6 +1,5 @@
 import React from 'react';
 import QuoteBox from './QuoteBox';
-import './stanandspidey.png';
 import './App.css';
 
 function Header() {
@@ -18,8 +17,7 @@ function Header() {
       </div>
 
       <figure id="img-div">
-          <img className="image" src="./stanandspidey.png" alt="Stan Lee and Spidey" title="Stan Lee gives a thumbs-up while Spidey snaps a pic in the background." style={{maxWidth: 486}}/>
-        <figcaption id="img-caption">Stan Lee as the image of success.</figcaption>
+          <img className="image" src="/stanandspidey.png" alt="Stan Lee and Spidey" title="Stan Lee gives a thumbs-up while Spidey snaps a pic in the background." style={{maxWidth: 486}}/>
       </figure>
       
     </div>
